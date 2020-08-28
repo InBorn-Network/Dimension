@@ -1,0 +1,5 @@
+name: Dimension
+main: me.c1oky.Dimension
+version: "1.0"
+api: "1.0.11"
+author: C1oky | InBorn Project
