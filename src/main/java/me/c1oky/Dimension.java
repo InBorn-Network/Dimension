@@ -6,7 +6,7 @@ import cn.nukkit.entity.Entity;
 import cn.nukkit.event.EventHandler;
 import cn.nukkit.event.Listener;
 import cn.nukkit.event.entity.EntityLevelChangeEvent;
-import cn.nukkit.event.server.DataPacketReceiveEvent;
+import cn.nukkit.event.server.DataPacketSendEvent;
 import cn.nukkit.level.Level;
 import cn.nukkit.math.BlockVector3;
 import cn.nukkit.network.protocol.*;
@@ -20,7 +20,7 @@ public class Dimension extends PluginBase implements Listener {
     }
 
     @EventHandler
-    public void onDataPacketReceive(DataPacketReceiveEvent event) {
+    public void onDataPacketSend(DataPacketSendEvent event) {
         DataPacket dataPacket = event.getPacket();
         if (dataPacket instanceof StartGamePacket) {
             Player player = event.getPlayer();
